@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>table</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		
+		function generate(){
+		var elem=document.getElementById('box');
+		var counttable="<table>";
+
+		var tablebody="<tbody>";
+
+		var tablebodyend="</tbody>";
+		var tablerow="";
+		var countableend="</table>";
+		
+		for(var i=1;i<=10;i++)
+		{
+			tablerow=tablerow+"<tr>"
+			for(var j=1;j<=20;j++)
+			{
+				tablerow=tablerow+"<td>"+(j*i)+"</td>";
+			}
+			tablerow=tablerow+"</tr>";
+		}
+
+		elem.innerHTML=counttable+tablebody+tablerow+tablebodyend+countableend;
+	}
+
+		
+	</script>
+</head>
+<body>
+	 <section class="pagewrapper">
+	 <h1>Generate 1 to 20 Table </h1>	
+     <button onclick="generate()" > Click me</button>
+     <div class="box" id="box">Table</div>
+ </section>
+</body>
+</html>
